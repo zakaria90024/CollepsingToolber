@@ -29,7 +29,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        unregisterReceiver(MyReceiver);
+        try {
+            unregisterReceiver(MyReceiver);
+        }catch (Exception e){
+
+        }
+
     }
 
     @Override
